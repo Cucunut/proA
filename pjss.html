@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportStore - Cửa Hàng Đồ Thể Thao</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Sport<span>Store</span></div>
+        <nav>
+            <ul>
+                <li><a href="#">Trang Chủ</a></li>
+                <li><a href="#">Giày</a></li>
+                <li><a href="#">Quần Áo</a></li>
+                <li><a href="#">Phụ Kiện</a></li>
+            </ul>
+        </nav>
+        <div class="cart-icon" onclick="toggleCart()">
+            🛒 Giỏ hàng (<span id="cart-count">0</span>)
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Bứt Phá Giới Hạn</h2>
+            <p>Khám phá bộ sưu tập đồ thể thao mới nhất năm 2026.</p>
+            <a href="#" class="btn">Mua Ngay</a>
+        </div>
+    </section>
+
+    <main>
+        <h2 class="section-title">Sản Phẩm Nổi Bật</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500" alt="Giày chạy bộ">
+                <h3>Giày Chạy Bộ Pro X</h3>
+                <p class="price">1,250,000 đ</p>
+                <button class="add-to-cart-btn" onclick="addToCart('Giày Chạy Bộ Pro X', 1250000)">Thêm vào giỏ</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500" alt="Áo thể thao">
+                <h3>Áo Thun Thể Thao Dri-Fit</h3>
+                <p class="price">350,000 đ</p>
+                <button class="add-to-cart-btn" onclick="addToCart('Áo Thun Thể Thao Dri-Fit', 350000)">Thêm vào giỏ</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=500" alt="Thảm tập">
+                <h3>Thảm Tập Yoga Cao Cấp</h3>
+                <p class="price">450,000 đ</p>
+                <button class="add-to-cart-btn" onclick="addToCart('Thảm Tập Yoga Cao Cấp', 450000)">Thêm vào giỏ</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=500" alt="Tạ tay">
+                <h3>Bộ Tạ Tay Dumbbell (5kg)</h3>
+                <p class="price">600,000 đ</p>
+                <button class="add-to-cart-btn" onclick="addToCart('Bộ Tạ Tay Dumbbell', 600000)">Thêm vào giỏ</button>
+            </div>
+        </div>
+    </main>
+
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Giỏ Hàng Của Bạn</h3>
+            <span class="close-btn" onclick="toggleCart()">X</span>
+        </div>
+        <div id="cart-items">
+            <p style="padding: 20px; color: #888;">Giỏ hàng trống.</p>
+        </div>
+        <div class="cart-footer">
+            <h4>Tổng cộng: <span id="cart-total">0 đ</span></h4>
+            <button class="checkout-btn" onclick="alert('Cảm ơn bạn đã mua hàng!')">Thanh Toán</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 SportStore. Tất cả các quyền được bảo lưu.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
